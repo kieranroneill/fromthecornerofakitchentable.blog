@@ -1,0 +1,70 @@
+{{!< ../default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#if @member}}
+
+{{!-- Logged in: Account info --}}
+<div class="primary site-account">
+
+	<article class="post">
+
+		<header class="post-header inner-small outer">
+			<h1 class="post-title">{{t "Account Details"}}</h1>
+		</header><!-- .post-header -->
+
+		<div class="post-content inner-small outer">
+
+			{{#if @member.paid}}
+
+			{{#foreach @member.subscriptions}}
+			<div class="account-subscription">
+				{{#if cancel_at_period_end}}
+				<p><strong>{{t "Your subscription will expire on"}} {{date current_period_end format="DD MMM YYYY"}}.</strong> {{t "If you change your mind in the mean time you can turn auto-renew back on to continue your subscription."}}</p>
+				{{else}}
+				<p>{{{t "You have an active <strong>{sitetitle}</strong> account with access to all areas. You're all set, but if you need any help, get in touch with us and we'd be happy to help." sitetitle=@site.title}}}</p>
+				{{/if}}
+				<div class="account-group">
+					<label class="account-group-label">{{t "Email address:"}}</label>
+					<span class="account-group-content">{{@member.email}}</span>
+				</div>
+				<div class="account-group">
+					<label class="account-group-label">{{t "Subscription plan:"}}</label>
+					<span class="account-group-content">${{price plan.amount}}/{{plan.interval}}</span>
+				</div>
+				<div class="account-group">
+					<label class="account-group-label">{{t "Card:"}}</label>
+					<span class="account-group-content">**** **** **** {{default_payment_card_last4}}</span>
+				</div>
+				<div class="account-group">
+					<label class="account-group-label">
+						{{#if cancel_at_period_end}}
+						{{t "Expires:"}}
+						{{else}}
+						{{t "Next bill date:"}}
+						{{/if}}
+					</label>
+					<span class="account-group-content">{{date current_period_end format="DD MMM YYYY"}}</span>
+				</div>
+				<p class="account-cancel">{{cancel_link class="button" errorClass="cancel-error"}}</p>
+			</div>
+			{{/foreach}}
+
+			{{else}}
+
+			<p>{{{t "You are subscribed to free updates from <strong>{sitetitle}</strong>, but don't have a paid subscription to unlock full access. Upgrade your account and get access to all areas." sitetitle=@site.title}}}</p>
+			<p><a class="button" href="{{@site.url}}/subscribe/">{{t "See subscription plans"}}</a></p>
+
+			{{/if}}
+
+		</div><!-- .post-content -->
+
+	</article><!-- .post -->
+
+</div><!-- .primary -->
+
+{{else}}
+
+{{!-- Not logged in: Redirect to signin --}}
+<script>window.location = '{{@site.url}}/signin/';</script>
+
+{{/if}}

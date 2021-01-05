@@ -1,0 +1,75 @@
+/**
+ * 5. Site Header
+ */
+.site-header {
+  padding-bottom: 4.16667em;
+  padding-top: 3.88889em;
+}
+
+.site-header-inside {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  margin: 0 20px 0.66667em 0;
+
+  img {
+    max-height: 50px;
+  }
+}
+
+.site-title {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.16667;
+  margin: 0 20px 0.33333em 0;
+  text-transform: uppercase;
+
+  a {
+    border-left: 0.27778em solid $accent;
+    color: inherit;
+    padding-left: 0.55555em;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent-alt;
+    }
+  }
+}
+
+.site-description {
+  color: $gray;
+  -ms-flex: 1 1 360px;
+  -webkit-flex: 1 1 360px;
+  flex: 1 1 360px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.85714em;
+  max-width: 480px;
+}
+
+@media only screen and (max-width: 960px) {
+  .site-header {
+    padding-bottom: 2.66667em;
+    padding-top: 3.33333em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .site-header {
+    padding-bottom: 2em;
+    padding-top: 2.66667em;
+  }
+
+  .site-title {
+    font-size: 1.55556em;
+  }
+}

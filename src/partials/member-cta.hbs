@@ -1,0 +1,21 @@
+<section class="member-cta {{visibility}}">
+	{{!-- Post for paying subscribers: show subscription plans --}}
+	<div class="member-cta-paid outer">
+		<h2 class="member-cta-title">{{t "This post is for paying subscribers only"}}</h2>
+		{{#if @member}}
+		<p>{{t "Upgrade your account to keep reading this post and get access to the full library of posts for paying subscribers only."}}</p>
+		<a class="button" href="{{@site.url}}/subscribe/">{{t "See subscription plans"}}</a>
+		{{else}}
+		<p>{{t "Subscribe to get access to the full library of posts for paying subscribers only."}}</p>
+		<a class="button" href="{{@site.url}}/subscribe/">{{t "Subscribe now"}}</a>
+		<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
+		{{/if}}
+	</div><!-- .member-cta-paid -->
+	{{!-- Post for subscribers: show subscription plans --}}
+	<div class="member-cta-member outer">
+		<h2 class="member-cta-title">{{t "This post is for subscribers only"}}</h2>
+		<p>{{t "Subscribe to get access to the full library of posts for subscribers only."}}</p>
+		<a class="button" href="{{@site.url}}/subscribe/">{{t "Subscribe now"}}</a>
+		<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
+	</div><!-- .member-cta-member -->
+</section><!-- .member-cta -->

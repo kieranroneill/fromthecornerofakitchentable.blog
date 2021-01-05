@@ -1,0 +1,10 @@
+{{!-- Member sign up form --}}
+<form data-members-form="signup" class="signup-form">
+	<div class="form-group">
+		<input data-members-email class="subscribe-email" type="email" name="email" placeholder="{{t "Your email address"}}" required />
+		<button class="button" type="submit">
+			<span class="button-content">{{t "Continue"}}</span>
+		</button>
+	</div>
+	{{> "member-form-messages"}}
+</form><!-- signup-form -->

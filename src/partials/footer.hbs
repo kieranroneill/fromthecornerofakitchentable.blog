@@ -1,0 +1,36 @@
+<footer class="site-footer outer">
+	<div class="inner">
+
+		<div class="footer-top">
+
+			{{#if @site.twitter}}
+			<a href="{{twitter_url}}" class="button button-icon button-fill-horz" target="_blank" rel="noopener">{{> "icons/twitter"}}<span class="screen-reader-text">Twitter</span></a>
+			{{/if}}
+			{{#if @site.facebook}}
+			<a href="{{facebook_url}}" class="button button-icon button-fill-horz" target="_blank" rel="noopener">{{> "icons/facebook"}}<span class="screen-reader-text">Facebook</span></a>
+			{{/if}}
+
+			{{!-- Additional social links - partials/social-links.hbs --}}
+			{{> social-links}}
+
+		</div><!-- .footer-top -->
+
+		<div class="footer-bottom">
+
+			{{#if @site.secondary_navigation}}
+			<nav id="secondary-navigation" class="footer-nav" aria-label="{{t "Secondary Menu"}}">
+				{{navigation type="secondary"}}
+			</nav>
+			{{/if}}
+
+			<div class="site-info">
+				<a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+				<br />{{{t "Powered by {ghostlink}. BlogInn theme by {jgtlink}." ghostlink="<a  target=\"_blank\" href=\"https://ghost.org\" rel=\"noopener\">Ghost</a>" jgtlink="<a target=\"_blank\" href=\"https://justgoodthemes.com/\" rel=\"noopener\">JustGoodThemes</a>"}}}
+			</div><!-- .site-info -->
+
+			<a href="#page" id="top-link" class="top-link button button-icon button-fill-horz">{{> "icons/chevron-up"}}<span class="screen-reader-text">{{t "Back to the top"}}</span></a>
+
+		</div><!-- .footer-bottom -->
+
+	</div><!-- .inner -->
+</footer><!-- .site-footer -->

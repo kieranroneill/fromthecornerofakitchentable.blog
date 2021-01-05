@@ -1,0 +1,75 @@
+<nav class="site-nav outer" aria-label="{{t "Main Menu"}}">
+	<div class="inner">
+		<div class="site-nav-inside">
+
+			{{#if @site.navigation}}
+			<button id="menu-show" class="menu-toggle"><span class="icon icon-menu" aria-hidden="true"></span>{{t "Menu"}}</button>
+			<div class="menu-panel">
+				<div class="menu-panel-scrollable">
+					<div class="menu-panel-top">
+						<button id="menu-hide" class="menu-toggle button button-icon button-fill-horz"><span class="icon icon-close" aria-hidden="true"></span><span class="screen-reader-text">{{t "Close"}}</span></button>
+					</div>
+					{{navigation}}
+				</div>
+			</div><!-- .nav-menu -->
+			{{/if}}
+
+			<ul class="actions">
+
+			{{!-- Members enabled: member action buttons --}}
+			{{#if @labs.members}}
+
+				{{!-- Not paying member: show subscription options --}}
+				{{^if @member.paid}}
+
+				<li><a href="{{@site.url}}/subscribe/" class="button-subscribe button">{{t "Subscribe"}}</a></li>
+
+				{{/if}}
+
+				<li>
+					<button id="member-panel-show" class="member-panel-toggle button button-icon button-fill-horz">{{> "icons/user"}}<span class="screen-reader-text">{{t "Members menu"}}</span>{{> "icons/user"}}</button>
+					<div class="member-panel">
+						<div class="member-panel-scrollable">
+							<div class="member-panel-inside">
+								<div class="member-panel-top">
+									<button id="member-panel-hide" class="member-panel-toggle button button-icon button-fill-horz"><span class="icon icon-close" aria-hidden="true"></span><span class="screen-reader-text">{{t "Close"}}</span></button>
+								</div>
+								<div class="member-panel-content outer">
+
+									{{!-- Logged in: view account or log out --}}
+									{{#if @member}}
+
+									<p>{{@member.email}}</p>
+									<ul class="member-menu">
+										<li><a class="button" href="{{@site.url}}/account/">{{t "View Account"}}</a></li>
+										<li><a class="button" href="#signout" data-members-signout>{{t "Sign out"}}</a></li>
+									</ul>
+
+									{{!-- Not logged in: log in or sign up --}}
+									{{else}}
+
+									<ul class="member-menu">
+										<li><a href="{{@site.url}}/signin/" class="button">{{t "Sign in"}}</a></li>
+										<li>Need an account? <a href="{{@site.url}}/signup/">{{t "Sign up"}}</a></li>
+									</ul>
+
+									{{/if}}
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			{{!-- Members not enabled: rss button --}}
+			{{else}}
+
+			<li><a class="button button-icon button-fill-horz" href="{{@site.url}}/rss/">{{> "icons/rss"}}<span class="screen-reader-text">{{t "Subscribe"}}</span></a></li>
+
+			{{/if}}
+
+			</ul><!-- .actions -->
+
+		</div><!-- .site-nav-inside -->
+	</div><!-- .inner -->
+</nav><!-- .site-nav -->

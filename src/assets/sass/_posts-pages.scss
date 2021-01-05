@@ -1,0 +1,384 @@
+/**
+ * 6. Content
+ * 6.1 Posts and Pages
+ */
+.post {
+  background-color: #fff;
+  margin-bottom: 3.33333em;
+  padding-bottom: 2.22222em;
+
+  &.featured {
+    position: relative;
+  }
+}
+
+.post-template {
+  .post {
+    margin-bottom: 1.11111em;
+  }
+}
+
+.featured-badge {
+  background-color: $accent-alt;
+  color: #fff;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 30px;
+
+  svg {
+    fill: currentColor;
+    height: 14px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+
+.post-header {
+  margin-bottom: 2.22222em;
+}
+
+.post-thumbnail {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+
+.post-title {
+  font-size: 2em;
+  margin: 0 0 0.66667em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.post-header-wrap {
+  overflow: hidden;
+  position: relative;
+
+  .post-title {
+    background-color: $accent;
+    clear: both;
+    color: #fff;
+    float: left;
+    margin: 1.66667em 0 0;
+    max-width: 75%;
+    padding-bottom: 0.83333em;
+    padding-top: 0.83333em;
+  }
+
+  .post-thumbnail + .post-title {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.post-meta {
+  background-color: $accent-alt;
+  clear: both;
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding-bottom: 1.25em;
+  padding-top: 1.25em;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.read-more {
+  margin-top: 2.22222em;
+
+  .button {
+    padding: 0.75em 15px;
+  }
+}
+
+.post-footer {
+  margin-top: 1.66667em;
+}
+
+.post-share,
+.post-tags {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  a {
+    margin: 0.25em 5px 0.25em 0;
+
+    &:first-of-type {
+      margin-left: 8px;
+    }
+  }
+}
+
+.post-share {
+  margin-bottom: 2.72727em;
+
+  .button {
+    color: $gray;
+    height: 2.57143em;
+    line-height: 2.57143em;
+    width: 2.57143em;
+  }
+}
+
+.post-tags {
+  border-top: 2px solid rgba($gray-light,.3);
+  padding-top: 2.72727em;
+
+  a {
+    background-color: rgba($gray-light,.3);
+    color: $gray;
+    padding: 0.27273em 0.90909em;
+    text-decoration: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+}
+
+/* Author box */
+.author-box {
+  background-color: #fff;
+  margin-bottom: 1.11111em;
+  padding-bottom: 2.22222em;
+  padding-top: 2.22222em;
+
+  &:last-child {
+    margin-bottom: 3.33333em;
+  }
+}
+
+.author-info {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  & + .author-info {
+    border-top: 2px solid rgba($gray-light,.3);
+    margin-top: 1.66667em;
+    padding-top: 1.66667em;
+  }
+}
+
+.author-avatar {
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+}
+
+.author-title {
+  font-size: 0.88889em;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.author-bio {
+  font-size: 0.88889em;
+  line-height: 1.5;
+  margin: 0.75em 0 0;
+}
+
+.author-links {
+  color: $gray-light;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 1.5em 0 0;
+  text-transform: uppercase;
+
+  & > span {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  svg {
+    display: inline-block;
+    fill: currentColor;
+    height: 1em;
+    margin-right: 3px;
+    position: relative;
+    top: 0.1em;
+  }
+}
+
+/* Archives */
+.page-header {
+  background-color: rgba($gray,.15);
+  border-left: 3px solid $accent;
+  color: $gray-light;
+  margin-bottom: 2.22222em;
+  padding-bottom: 1.33333em;
+  padding-top: 1.33333em;
+
+  .page-title,
+  .author-title {
+    color: inherit;
+  }
+
+  .highlight {
+    color: #fff;
+  }
+
+  .author-info {
+    padding-bottom: 0.88889em;
+    padding-top: 0.88889em;
+  }
+
+  .author-links {
+    color: $gray;
+  }
+}
+
+.page-title {
+  font-size: 0.88889em;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.page-description {
+  font-size: 0.88889em;
+  line-height: 1.5;
+  margin: 0.75em 0 0;
+}
+
+/* Error pages */
+.error-template {
+  .inner {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .post,
+  .page-header {
+    margin-bottom: 3vw;
+  }
+
+  .post-template .post,
+  .author-box {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .post-title {
+    font-size: 1.77778em;
+  }
+
+  .post-header-wrap {
+    .post-title {
+      padding-bottom: 0.75em;
+      padding-top: 0.75em;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .post-title {
+    font-size: 1.75em;
+  }
+
+  .post-header-wrap {
+    .post-title {
+      padding-bottom: 0.53571em;
+      padding-top: 0.53571em;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post,
+  .page-header {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .post-header {
+    margin-bottom: 1.33333em;
+  }
+
+  .post-header-wrap {
+    .post-title {
+      font-size: 1.25em;
+      margin-top: 1.5em;
+      max-width: none;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
+    }
+  }
+
+  .post-meta {
+    font-size: 11px;
+    padding-bottom: 0.90909em;
+    padding-top: 0.90909em;
+  }
+
+  .author-info {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    .author-avatar {
+      margin: 0 0 1.25em;
+    }
+  }
+}

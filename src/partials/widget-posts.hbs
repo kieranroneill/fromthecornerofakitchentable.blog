@@ -1,0 +1,13 @@
+<section class="widget widget-recent-posts">
+	<h2 class="widget-title line-accent">{{t "Latest Posts"}}</h2>
+	{{#get "posts" limit="3"}}
+	<ul>
+		{{#foreach posts visibility="all"}}
+		<li>
+			<h3 class="recent-title"><a href="{{url}}">{{title}}</a></h3>
+			<div class="recent-date">{{date format="MMMM DD, YYYY"}}</div>
+		</li>
+		{{/foreach}}
+	</ul>
+	{{/get}}
+</section><!-- .widget -->

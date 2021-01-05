@@ -1,0 +1,30 @@
+{{!< ../default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#if @member}}
+
+{{!-- Logged in: Redirect home --}}
+<script>window.location = '{{@site.url}}';</script>
+
+{{else}}
+
+{{!-- Not logged in: Signup form --}}
+<div class="primary site-signup">
+
+	<article class="post">
+
+		<header class="post-header inner-small outer">
+			<h1 class="post-title">{{t "Create an Account"}}</h1>
+		</header><!-- .post-header -->
+
+		<div class="post-content inner-small outer">
+			<p>{{t "Don't have an account with {sitetitle}? Creating one takes just minutes." sitetitle=@site.title}}</p>
+			{{> "member-signup-form"}}
+			<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
+		</div><!-- .post-content -->
+
+	</article><!-- .post -->
+
+</div><!-- .primary -->
+
+{{/if}}

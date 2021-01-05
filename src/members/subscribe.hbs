@@ -1,0 +1,59 @@
+{{!< ../default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#if @member.paid}}
+
+{{!-- Logged in, paying member: Show account info --}}
+<script>window.location = '{{@site.url}}/account/';</script>
+
+{{else}}
+
+{{!-- Not logged in or not paying member: Show membership plans --}}
+<div class="primary site-membership">
+
+	<article class="post">
+
+		<header class="post-header inner-small outer">
+			<h1 class="post-title">{{t "Choose Your Subscription"}}</h1>
+		</header><!-- .post-header -->
+
+		<div class="post-content">
+
+			{{#if @member}}
+
+			<div class="inner-small outer">
+				<p>{{{t "Unlock full access to <strong>{sitetitle}</strong> and see the entire library of members-only content & updates." sitetitle=@site.title}}}</p>
+			</div>
+
+			<div class="inner-small">
+				<div class="membership-plans">
+					{{> "membership-monthly"}}
+					{{> "membership-yearly"}}
+				</div>
+			</div>
+
+			{{else}}
+
+			<div class="inner-small outer">
+				{{{t "Start free or choose any of our paid plans to unlock full access to <strong>{sitetitle}</strong> and see the entire library of members-only content & updates." sitetitle=@site.title}}}
+			</div>
+
+			<div class="membership-plans">
+				{{> "membership-free"}}
+				{{> "membership-monthly"}}
+				{{> "membership-yearly"}}
+			</div>
+
+			<div class="inner-small outer">
+				<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a>.</p>
+			</div>
+
+			{{/if}}
+
+		</div><!-- .post-content -->
+
+	</article><!-- .post -->
+
+</div><!-- .primary -->
+
+{{/if}}

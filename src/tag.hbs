@@ -1,0 +1,24 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area on the tag page --}}
+<div class="primary">
+
+	{{#tag}}
+	<header class="page-header">
+		<div class="page-header-inside inner-small outer">
+			<h1 class="page-title line-accent">{{{t "All posts in <span class='highlight'>{tagname}</span>" tagname=name}}}</h1>
+			{{#if description}}
+			<p class="page-description">{{description}}</p>
+			{{/if}}
+		</div>
+	</header><!-- .page-header -->
+	{{/tag}}
+
+	{{!-- The post loop - partials/loop.hbs --}}
+	{{> "loop"}}
+
+</div><!-- .primary -->
+
+{{!-- The theme sidebar - partials/sidebar.hbs --}}
+{{> sidebar}}

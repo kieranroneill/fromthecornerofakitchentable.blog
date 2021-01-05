@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="utf-8">
+
+	{{!-- Page Meta --}}
+	<title>{{@site.title}} — {{statusCode}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{!-- Styles --}}
+	{{> "custom-fonts"}}
+	<link href="{{asset "css/style.css"}}" rel="stylesheet" />
+
+</head>
+<body class="error-template">
+
+	<div id="page" class="site">
+
+		{{!-- The theme header - partials/header.hbs --}}
+		{{> header}}
+
+		<div class="site-content outer">
+		<div class="inner">
+			<main class="site-main">
+
+				<div class="primary">
+
+					<article class="post">
+						<header class="post-header">
+							<div class="post-header-wrap">
+								{{#if @site.cover_image}}
+								<div class="post-thumbnail">
+									<img srcset="{{img_url @site.cover_image size="xs"}} 300w, {{img_url @site.cover_image size="s"}} 480w, {{img_url @site.cover_image size="m"}} 600w, {{img_url @site.cover_image size="l"}} 900w, {{img_url @site.cover_image size="xl"}} 1800w" sizes="(max-width: 500px) calc(100vw - 30px), (max-width: 960px) 94vw, (max-width: 1260px) calc(75vw - 45px), 900px" src="{{img_url @site.cover_image size="l"}}" alt="{{statusCode}}" />
+								</div>
+								{{/if}}
+								<h1 class="post-title outer">{{t "Error 404: Page Not Found"}}</h1>
+							</div>
+						</header><!-- .post-header -->
+						<div class="post-content inner-small outer">
+							<p>{{t "Apologies, but the page you requested could not be found."}} <br /><a class="error-link" href="{{@site.url}}">{{{t "Go to the front page &rarr;"}}}</a></p>
+						</div><!-- .post-content -->
+					</article><!-- .post -->
+
+				</div><!-- .primary -->
+
+				</main><!-- .site-main -->
+			</div><!-- .inner -->
+		</div><!-- .site-content -->
+
+	</div><!-- .site -->
+
+</body>
+</html>
