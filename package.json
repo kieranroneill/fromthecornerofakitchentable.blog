@@ -1,0 +1,14 @@
+{
+  "name": "fromthecornerofthekitchentable.blog",
+  "version": "1.0.0",
+  "description": "Custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
+  "main": "dist/index.hbs",
+  "author": "Kieran O'Neill <kieran.oneill@protonmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.6"
+  }
+}
