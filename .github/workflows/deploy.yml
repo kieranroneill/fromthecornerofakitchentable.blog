@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout 🛎️"
+        uses: actions/checkout@v2
+      - name: "Package 📦"
+        run: |
+          ./scripts/build.sh && \
+          ./scripts/package.sh
+      - name: "Deploy 🚀"
+        uses: TryGhost/action-deploy-theme@v1.4.0
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          file: dist/fromthecornerofakitchentable.blog.zip
