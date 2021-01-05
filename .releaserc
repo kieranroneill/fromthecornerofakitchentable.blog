@@ -4,16 +4,17 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
+    "@semantic-release/npm",
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "./scripts/build.sh ${nextRelease.version} && ./scripts/package.sh"
+        "publishCmd": "./scripts/build.sh && ./scripts/package.sh"
       }
     ],
     [
       "@semantic-release/git",
       {
-        "assets": ["src/package.json", "package.json", "yarn.lock", "CHANGELOG.md"],
+        "assets": ["package.json", "yarn.lock", "CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],
@@ -24,7 +25,7 @@
           {
             "path": "dist/fromthecornerofakitchentable.blog.zip",
             "name": "fromthecornerofakitchentable.blog-${nextRelease.gitTag}.zip",
-            "label": "fromthecornerofakitchentable.blog (${nextRelease.gitTag}) theme"
+            "label": "fromthecornerofakitchentable.blog-${nextRelease.gitTag}.zip"
           }
         ]
       }
