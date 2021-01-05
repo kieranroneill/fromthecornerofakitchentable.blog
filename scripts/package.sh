@@ -23,7 +23,7 @@ function main() {
 
   # Zip up build.
   printf "%b Compressing theme... \n" "${INFO_PREFIX}"
-  zip -r -q "${DIST_PATH}"/fromthecornerofthekitchentable.blog.zip "${BUILD_PATH}"/*
+  zip -r -q "${DIST_PATH}"/fromthecornerofakitchentable.blog.zip "${BUILD_PATH}"/*
 
   printf "%b Done!\n" "${INFO_PREFIX}"
 }

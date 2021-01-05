@@ -1,5 +1,5 @@
 {
-  "name": "fromthecornerofthekitchentable.blog",
+  "name": "fromthecornerofakitchentable.blog",
   "version": "1.0.0",
   "description": "Custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
   "main": "dist/index.hbs",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kieranroneill/fromthecornerofthekitchentable.blog.git"
+    "url": "git+https://github.com/kieranroneill/fromthecornerofakitchentable.blog.git"
   },
   "private": true,
   "devDependencies": {

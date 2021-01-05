@@ -32,7 +32,7 @@ function main() {
   cp -r src/* "${BUILD_PATH}"/
 
   printf "%b Updating to version %b\n" "${INFO_PREFIX}" "${version}"
-  cd "${BUILD_PATH}" && npm version "${version}"
+  cd "${BUILD_PATH}" && npm version "${version}" --allow-same-version
 
   printf "%b Done!\n" "${INFO_PREFIX}"
 }
