@@ -1,0 +1,33 @@
+{
+  "branches": "main",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "./scripts/build.sh ${nextRelease.version} && ./scripts/package.sh"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["src/package.json", "package.json", "yarn.lock", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/fromthecornerofakitchentable.blog.zip",
+            "name": "fromthecornerofakitchentable.blog-${nextRelease.gitTag}.zip",
+            "label": "fromthecornerofakitchentable.blog (${nextRelease.gitTag}) theme"
+          }
+        ]
+      }
+    ]
+  ]
+}
