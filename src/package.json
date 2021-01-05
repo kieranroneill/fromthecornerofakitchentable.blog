@@ -1,7 +1,7 @@
 {
-  "name": "bloginn",
-  "description": "Bold theme for Ghost.",
-  "version": "2.0.0",
+  "name": "fromthecornerofthekitchentable.blog",
+  "description": "Custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
+  "version": "1.0.0",
   "engines": {
     "ghost": ">=3.5.0",
     "ghost-api": "v3"
@@ -11,9 +11,9 @@
     "mobile": "assets/screenshot-mobile.jpg"
   },
   "author": {
-    "name": "Just Good Themes",
-    "email": "hello@justgoodthemes.com",
-    "url": "https://justgoodthemes.com"
+    "name": "Kieran O'Neill",
+    "email": "kieran.oneill@protonmail.com",
+    "url": "https://kieranoneill.com"
   },
   "keywords": [
     "ghost",
