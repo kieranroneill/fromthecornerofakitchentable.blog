@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.0.0...v1.1.0) (2021-01-05)
+
+
+### Features
+
+* updates the accent colour ([c60124a](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/commit/c60124af2429310d8a628eaec0259493dbee9b3b))
+
 # 1.0.0 (2021-01-05)
 
 
