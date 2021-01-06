@@ -1,7 +1,7 @@
 {
   "name": "fromthecornerofakitchentable.blog",
   "version": "1.1.0",
-  "description": "Custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
+  "description": "A custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
   "private": true,
   "author": {
     "name": "Kieran O'Neill",
