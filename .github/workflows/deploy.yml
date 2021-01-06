@@ -12,9 +12,7 @@ jobs:
       - name: "Checkout 🛎️"
         uses: actions/checkout@v2
       - name: "Package 📦"
-        run: |
-          ./scripts/build.sh && \
-          ./scripts/package.sh
+        run: ./scripts/package.sh
       - name: "Deploy 🚀"
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:

@@ -8,7 +8,7 @@
       "@semantic-release/exec",
       {
         "prepareCmd": "./scripts/version.sh ${nextRelease.version}",
-        "publishCmd": "./scripts/build.sh && ./scripts/package.sh"
+        "publishCmd": "./scripts/package.sh"
       }
     ],
     [

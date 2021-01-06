@@ -2,7 +2,6 @@
 
 function set_vars() {
   export BIN_PATH=node_modules/.bin
-  export BUILD_PATH=build
   export DIST_PATH=dist
   export ERROR_PREFIX='\033[0;31m[ERROR]\033[0m'
   export INFO_PREFIX='\033[1;33m[INFO]\033[0m'
