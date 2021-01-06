@@ -61,39 +61,39 @@
 
 	</article><!-- .post -->
 
-	<div class="author-box outer">
-		<div class="inner-small">
-			{{#foreach authors}}
-			<div class="author-info">
-				{{#if profile_image}}
-				<a class="author-avatar" href="{{@site.url}}/author/{{slug}}">
-					<img src="{{img_url profile_image size="xxs"}}" alt="{{name}}" class="avatar" />
-				</a>
-				{{/if}}
-				<div class="author-details">
-					<h2 class="author-title line-accent">{{{t "About <a href='{url}'>{name}</a>" url=(url) name=name}}}</h2>
-					{{#if bio}}
-					<p class="author-bio">{{bio}}</p>
-					{{/if}}
-					<p class="author-links">
-						{{#if location}}
-						<span class="author-location">{{> "icons/map-pin"}} {{location}}</span>
-						{{/if}}
-						{{#if website}}
-						<span class="author-website">{{> "icons/link"}} <a href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a></span>
-						{{/if}}
-						{{#if facebook}}
-						<span class="author-facebook">{{> "icons/facebook"}} <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
-						{{/if}}
-						{{#if twitter}}
-						<span class="author-twitter">{{> "icons/twitter"}} <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
-						{{/if}}
-					</p>
-				</div>
-			</div><!-- .author-info -->
-			{{/foreach}}
-		</div><!-- .inner-small -->
-	</div><!-- .author-box -->
+  {{!--  <div class="author-box outer">
+    <div class="inner-small">
+      {{#foreach authors}}
+      <div class="author-info">
+        {{#if profile_image}}
+        <a class="author-avatar" href="{{@site.url}}/author/{{slug}}">
+          <img src="{{img_url profile_image size="xxs"}}" alt="{{name}}" class="avatar" />
+        </a>
+        {{/if}}
+        <div class="author-details">
+          <h2 class="author-title line-accent">{{{t "About <a href='{url}'>{name}</a>" url=(url) name=name}}}</h2>
+          {{#if bio}}
+          <p class="author-bio">{{bio}}</p>
+          {{/if}}
+          <p class="author-links">
+            {{#if location}}
+            <span class="author-location">{{> "icons/map-pin"}} {{location}}</span>
+            {{/if}}
+            {{#if website}}
+            <span class="author-website">{{> "icons/link"}} <a href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a></span>
+            {{/if}}
+            {{#if facebook}}
+            <span class="author-facebook">{{> "icons/facebook"}} <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
+            {{/if}}
+            {{#if twitter}}
+            <span class="author-twitter">{{> "icons/twitter"}} <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
+            {{/if}}
+          </p>
+        </div>
+      </div><!-- .author-info -->
+      {{/foreach}}
+    </div><!-- .inner-small -->
+  </div><!-- .author-box --> --}}
 
 	{{!-- Previous/next post links --}}
 	<nav class="post-navigation">
@@ -129,11 +129,11 @@
 	</nav><!-- .post-navigation -->
 
 	{{!-- The theme comments - partials/comments.hbs --}}
-	{{> comments}}
+    {{!-- {{> comments}} --}}
 
-	{{/post}}
+    {{/post}}
 
-</div><!-- .primary -->
+  </div><!-- .primary -->
 
-{{!-- The theme sidebar - partials/sidebar.hbs --}}
+  {{!-- The theme sidebar - partials/sidebar.hbs --}}
 {{> sidebar}}
