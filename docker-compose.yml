@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  blog:
+    container_name: fromthecornerofakitchentable.blog
+    image: ghost:3.40.4-alpine
+    environment:
+      NODE_ENV: development
+      url: http://localhost:1337
+    volumes:
+      - ./local/data:/var/lib/ghost/content/data
+      - ./local/images:/var/lib/ghost/content/images
+      - ./local/settings:/var/lib/ghost/content/settings
+      - ./src:/var/lib/ghost/content/themes/fromthecornerofakitchentable.blog
+    ports:
+    - "1337:2368"
