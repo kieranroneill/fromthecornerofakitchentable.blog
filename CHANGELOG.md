@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.1.0...v1.2.0) (2021-01-06)
+
+
+### Features
+
+* removes author and comments from post ([9ddbbf5](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/commit/9ddbbf5cf7c9379a0ad216b8287ee33232f62fe6))
+
 # [1.1.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.0.0...v1.1.0) (2021-01-05)
 
 
