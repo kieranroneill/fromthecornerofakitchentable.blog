@@ -13,7 +13,7 @@ function main() {
   set_vars
 
   # Delete the build directory.
-  "${BIN_PATH}"/rimraf "${BUILD_PATH}"
+  rm -rf "${BUILD_PATH}"
   printf "%b Removed build directory.\n" "${INFO_PREFIX}"
 
   # Now recreate!
@@ -21,7 +21,6 @@ function main() {
 
   printf "%b Copying files...\n" "${INFO_PREFIX}"
   cp -r "${SRC_PATH}"/* "${BUILD_PATH}"/
-  cp package.json "${BUILD_PATH}"/
 
   printf "%b Done!\n" "${INFO_PREFIX}"
 }

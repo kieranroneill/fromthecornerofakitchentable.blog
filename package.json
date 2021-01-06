@@ -3,15 +3,6 @@
   "version": "1.1.0",
   "description": "Custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
   "private": true,
-  "engines": {
-    "ghost": ">=3.5.0",
-    "ghost-api": "v3"
-  },
-  "keywords": [
-    "ghost",
-    "theme",
-    "ghost-theme"
-  ],
   "author": {
     "name": "Kieran O'Neill",
     "email": "kieran.oneill@protonmail.com",
@@ -20,33 +11,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kieranroneill/fromthecornerofakitchentable.blog.git"
-  },
-  "screenshots": {
-    "desktop": "assets/screenshot-desktop.jpg",
-    "mobile": "assets/screenshot-mobile.jpg"
-  },
-  "config": {
-    "posts_per_page": 8,
-    "image_sizes": {
-      "xxs": {
-        "width": 150
-      },
-      "xs": {
-        "width": 300
-      },
-      "s": {
-        "width": 480
-      },
-      "m": {
-        "width": 600
-      },
-      "l": {
-        "width": 900
-      },
-      "xl": {
-        "width": 1800
-      }
-    }
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -57,7 +21,6 @@
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "semantic-release/release-notes-generator",
     "husky": "^4.3.6",
-    "rimraf": "^3.0.2",
     "semantic-release": "^17.3.1"
   }
 }

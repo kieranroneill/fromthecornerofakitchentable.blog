@@ -4,17 +4,17 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/npm",
     [
       "@semantic-release/exec",
       {
+        "prepareCmd": "./scripts/version.sh ${nextRelease.version}",
         "publishCmd": "./scripts/build.sh && ./scripts/package.sh"
       }
     ],
     [
       "@semantic-release/git",
       {
-        "assets": ["package.json", "yarn.lock", "CHANGELOG.md"],
+        "assets": ["package.json", "src/package.json", "CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],

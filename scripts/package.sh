@@ -13,10 +13,8 @@ function main() {
     exit 1
   fi
 
-  if [ -d "${DIST_PATH}" ]; then
-    printf "%b Removing previous dist directory... \n" "${INFO_PREFIX}"
-    "${BIN_PATH}"/rimraf "${DIST_PATH}"
-  fi
+  rm -rf "${DIST_PATH}"
+  printf "%b Removed previous dist directory\n" "${INFO_PREFIX}"
 
   # Create a new dist directory.
   mkdir "${DIST_PATH}"
