@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.2.0...v1.3.0) (2021-01-12)
+
+
+### Features
+
+* adds new fonts ([990d16b](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/commit/990d16bd404992d65e454780aa19b980573fff61))
+
 # [1.2.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.1.0...v1.2.0) (2021-01-06)
 
 
