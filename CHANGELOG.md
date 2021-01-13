@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.3.0...v1.4.0) (2021-01-13)
+
+
+### Features
+
+* increases the size of the site banner logo ([d6e42d5](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/commit/d6e42d529306716cc2d75d0bbc83848ffc50e0af))
+
 # [1.3.0](https://github.com/kieranroneill/fromthecornerofakitchentable.blog/compare/v1.2.0...v1.3.0) (2021-01-12)
 
 

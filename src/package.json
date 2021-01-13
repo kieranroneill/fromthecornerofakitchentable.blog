@@ -1,6 +1,6 @@
 {
   "name": "fromthecornerofakitchentable",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A custom theme for the From The Corner Of A Kitchen Table blog, based on the BlogInn theme.",
   "engines": {
     "ghost": ">=3.5.0",
